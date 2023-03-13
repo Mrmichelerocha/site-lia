@@ -1,0 +1,91 @@
+#contact {
+	display: flex;
+	justify-content: space-between;
+
+	padding: clamp(1.5rem, 1rem + 4vw, 6rem) clamp(1.5rem, 1rem + 4vw, 6rem);
+	h2 {
+		text-align: left;
+		margin-bottom: 1rem;
+	}
+
+	.itemize {
+		margin-bottom: 3rem;
+		list-style: inside;
+		.item {
+			display: list-item;
+			font-size: 1.25rem;
+			color: $dark-blue;
+			span {
+				color: $dark-purple;
+			}
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	.social-media-list {
+		gap: 1rem;
+		.sns {
+			display: flex;
+			gap: 1rem;
+			color: $dark-purple;
+			font-size: 1.25rem;
+			.icon {
+				color: $dark-blue;
+				font-size: 2rem;
+			}
+			&:hover {
+				color: $dark-blue !important;
+			}
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+	.message {
+        max-width: 40%;
+		.message-form {
+            label {
+                color: $dark-purple;
+                margin-bottom: 0.5rem;
+            }
+			input, textarea {
+				padding-inline: 0;
+				padding: 0.3rem 1rem;
+				box-sizing: border-box;
+				width: 100%;
+				border: solid $dark-blue 2px;
+				resize: none;
+				border-radius: 4px;
+				font-family: $main-font;
+				color: $dark-purple;
+				margin-bottom: 1rem;
+
+				// grid-column-start: 1;
+
+				&::placeholder {
+					color: #001f31;
+				}
+				&:focus {
+					outline: none;
+					border-color: $main-pink;
+				}
+                &.message-input {
+                    height: 15rem;
+                }
+                &.btn {
+                    color: $body-white;
+                    border: none;
+                }
+            }
+		}
+		@media (max-width: $small-screen) {
+			margin-top: 3rem;
+			max-width: 100%;
+		}
+	}
+	@media (max-width: $small-screen) {
+		flex-direction: column;
+	}
+}

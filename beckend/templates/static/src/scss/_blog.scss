@@ -1,0 +1,121 @@
+#intro.blog-intro {
+	margin-top: 6.3rem;
+    background: $body-gray;
+	.banner-container {
+		position: relative;
+
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		.banner-bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			filter: blur(4px) brightness(0.8);
+		}
+		.banner-img {
+			margin-top: 4rem;
+            width: 100%;
+            max-width: 80%;
+			z-index: 2;
+			max-height: 600px;
+            border: solid 2px $dark-blue;
+            border-bottom: none;
+			@media (max-width: $small-screen) {
+				max-width: 90%;
+			}
+		}
+	}
+    .titles {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+		padding: clamp(1.5rem, 1rem + 4vw, 6rem) clamp(1.5rem, 1rem + 4vw, 6rem);
+        h1 {
+            color: $black !important;
+            font-family: $main-font;
+			@media (max-width: $small-screen) {
+				font-size: 2.5rem;
+			}
+        }
+        p {
+            width: 50%;
+            text-align: center;
+            color: $black;
+			@media (max-width: $small-screen) {
+				width: 100%;
+				font-size: 1rem;
+			}
+        }
+    }
+}
+
+#all-articles {
+	padding: clamp(1.5rem, 1rem + 4vw, 6rem) clamp(1.5rem, 1rem + 4vw, 6rem);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    background-color: $body-white;
+
+	.search-box {
+		display: grid;
+		grid-auto-columns: minmax(0, 1fr);
+		grid-auto-flow: column;
+
+		gap: 3.5rem;
+
+		align-items: center;
+
+		width: 100%;
+		input[type="search"] {
+			padding-inline: 0;
+			padding: 0.3rem 1rem;
+			box-sizing: border-box;
+			width: 100%;
+			border: solid $dark-blue 2px;
+			resize: none;
+			border-radius: 4px;
+			font-family: $main-font;
+			color: $dark-purple;
+
+			// grid-column-start: 1;
+
+			&::placeholder {
+				color: #001f31;
+			}
+			&:focus {
+				outline: none;
+				border-color: $main-pink;
+			}
+		}
+		.selector {
+			width: 100%;
+			background: $body-white;
+			font-family: $main-font;
+			border: solid $dark-blue 2px;
+			color: $dark-purple;
+			padding: 0.4rem 1rem;
+
+			border-radius: 4px;
+			&:focus {
+				outline: none;
+				border-color: $main-pink;
+			}
+		}
+		.btn {
+			padding: 0.3rem 0;
+			width: 100%;
+			border-radius: 4px;
+		}
+		@media (max-width: $small-screen) {
+			grid-auto-flow: row;
+			gap: 1rem;
+		}
+	}
+	.card-info {
+		background: #629bfacc;
+	}
+}

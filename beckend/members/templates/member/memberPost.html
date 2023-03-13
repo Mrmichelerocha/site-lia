@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  Página inicial
+{% endblock %}
+
+{% block conteudo %}
+
+<section id="intro" class="not-home left-intro line-pink-blue">
+    <div class="banner-container-container">
+        <div class="banner-container">
+            <!-- <img src="./assets/Blooming Days.png" alt="" /> -->
+            <div class="texts hidden delay-1">
+                <h1>{{post.name}}</h1>
+                <p>
+                    {{post.description|safe}}
+                </p>
+            </div>
+            <div class="image hidden">
+                <img src="{{post.imagem.url}}" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<section id="badges" class="line-blue-pink">
+    <div class="dados">
+        <div class="contact-info hidden delay-1">
+            <h2>Dados</h2>
+            <ul class="itemize">
+                <li class="item">
+                    <span
+                        >E-mail:
+                        {{post.email}}</span
+                    >
+                </li>
+                <li class="item">
+                    <span>Telefone: {{post.number}}</span>
+                </li>
+                <li class="item">
+                    <span
+                        >Currículo:
+                        {{post.curriculum}}</span
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="badges">
+        <h2>Conquistas</h2>
+        <div class="badge-list">
+            <div class="conquista hidden">
+                <div class="image">
+                    <img src="{{post.achive.achievementsimg.url}}" alt="" />
+                </div>
+                <h3>{{post.achive.name}}</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

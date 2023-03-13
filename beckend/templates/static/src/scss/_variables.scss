@@ -1,0 +1,31 @@
+// Colors
+$main-pink: #d670fc;
+$light-blue: #05cef8;
+$dark-blue: #629bfa;
+$dark-purple: #5b4b61;
+$black: #3c3c3c;
+$body-gray: #f4f1f1;
+$body-white: #ffffff;
+
+$pink-blue-gradient: linear-gradient(90deg, #c668e9 11.77%, #5d92eb 100%);
+$blue-pink-gradient: linear-gradient(90deg, #5d92eb 11.77%, #c668e9 100%);
+$blue-pink-gradient-vertical: linear-gradient(
+	0deg,
+	#5d92eb 11.77%,
+	#c668e9 100%
+);
+$semi-transparent-gradient: linear-gradient(
+	90deg,
+	#c668e980 11.77%,
+	#5d92eb80 100%
+);
+
+// Fonts
+$main-font: "Oxygen", sans-serif;
+$title-font: "Poppins", sans-serif;
+
+// Screen Size
+$large-screen: 1260px;
+$medium-screen: 1100px;
+$small-screen: 900px;
+$smallest-screen: 675px;

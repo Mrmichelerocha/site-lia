@@ -1,0 +1,122 @@
+header {
+	width: 100%;
+	nav.navbar {
+		background-color: white;
+		width: 100%;
+		padding: 0 6rem;
+		max-height: 100px;
+		height: 100px;
+		transition: 0.3s ease-out;
+		&.smaller {
+			max-height: 60px;
+			filter: drop-shadow(0px 2px 10px #00000066);
+		}
+		.header-logo {
+			max-width: 120px;
+			transition: all 0.3s ease;
+
+			&.smaller {
+				height: 50px;
+			}
+		}
+		.menu-links {
+			.menu-nav {
+				display: grid;
+				grid-auto-flow: column;
+				gap: 2.5rem;
+				justify-items: center;
+				padding: 0;
+				margin: 0;
+				.menu-item {
+					a {
+						font-family: $main-font;
+						color: $dark-purple;
+						font-size: 1.125rem;
+					}
+				}
+			}
+			@media (max-width: $medium-screen) {
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				overflow: hidden;
+				right: 0;
+				top: 0;
+				width: 0;
+				transition: all 0.3s ease-out;
+				background-color: white;
+				.menu-nav {
+					display: flex;
+					flex-direction: column;
+					justify-items: center;
+					align-items: center;
+					gap: 1.5rem;
+					padding: 0;
+					margin: 0;
+					.menu-item {
+						a {
+							font-weight: bold;
+							font-size: 1.5rem;
+						}
+					}
+				}
+			}
+			&.show {
+				width: 300px;
+				border-left: 3px solid;
+				border-image: $blue-pink-gradient-vertical 1;
+			}
+		}
+		.burger-container {
+			display: none;
+			cursor: pointer;
+			height: 25.5px;
+			align-items: center;
+			z-index: 1001;
+			.burger-button {
+				background: $dark-blue;
+				border-radius: 5px;
+				width: 1.25rem;
+				height: 2.5px;
+				transition: all 0.3s ease-in-out;
+				z-index: 1001;
+				&::before,
+				&::after {
+					content: "";
+					background: $dark-blue;
+					position: absolute;
+					border-radius: 5px;
+					width: 1.25rem;
+					height: 2.5px;
+					transition: all 0.3s ease-in-out;
+				}
+				&::before {
+					transform: translateY(-9px);
+				}
+				&::after {
+					transform: translateY(9px);
+				}
+			}
+			@media (max-width: $medium-screen) {
+				display: flex;
+				&.on {
+					.burger-button {
+						background: transparent;
+
+						&::before {
+							transform: rotate(45deg);
+						}
+						&::after {
+							transform: rotate(-45deg);
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: $small-screen) {
+			padding: 0 1.5rem;
+		}
+	}
+}

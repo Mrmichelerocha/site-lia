@@ -1,0 +1,15 @@
+{% extends 'IndexCore.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  Página inicial
+{% endblock %}
+
+{% block conteudo %}
+
+  {% include 'introAbout.html' %}
+  {% include 'about.html' %}  {% comment %} vem do about index {% endcomment %}
+  {% include 'navegation.html' %}
+
+{% endblock %}

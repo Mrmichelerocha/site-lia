@@ -1,0 +1,41 @@
+{% load static %}
+<section id="things" class="line-pink-blue">
+    <div class="texts hidden">
+        <h2>O que Fazemos</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod butewbr tempor incididunt ut labore et
+            dolore magna aliqua. Lorem ipsum dolor, sit amet
+            consectetur.
+        </p>
+    </div>
+    <div class="cards">
+        <a href="" class="card card-article hidden">
+            <img src="{% static '/assets/lia-articles.png' %}" alt="" />
+            <div class="floating-link">
+                Ver Todos <span class="icon-arrow-right2"></span>
+            </div>
+            <div class="card-info">
+                <div class="title">Artigos</div>
+            </div>
+        </a>
+        <a href="" class="card card-article hidden delay-1">
+            <img src="{% static '/assets/lia-project.png' %}" alt="" />
+            <div class="floating-link">
+                Ver Todos <span class="icon-arrow-right2"></span>
+            </div>
+            <div class="card-info">
+                <div class="title">Projetos</div>
+            </div>
+        </a>
+        <a href="/members" class="card card-article hidden delay-2">
+            <img src="{% static './assets/lia-team.png' %}" alt="" />
+            <div class="floating-link">
+                Ver Todos <span class="icon-arrow-right2"></span>
+            </div>
+            <div class="card-info">
+                <div class="title">Membros</div>
+            </div>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  Página inicial
+{% endblock %}
+
+{% block conteudo %}
+
+  {% include 'intro.html' %}
+  {% include 'about.html' %}
+  {% include 'contentBlogFeature.html' %}
+  {% include 'contentProjectFeature.html' %} 
+  
+
+{% endblock %}

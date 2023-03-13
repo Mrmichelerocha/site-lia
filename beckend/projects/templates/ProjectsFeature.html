@@ -1,0 +1,38 @@
+{% extends 'IndexCore.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  Página inicial
+{% endblock %}
+
+{% block conteudo %}
+<section id="intro" class="blog-intro line-pink-blue">
+  <div class="banner-container">
+      <img src="{% static '/assets/about-project.png' %}" class="banner-bg">
+      <img src="{% static '/assets/about-project.png' %}" class="banner-img" alt="" />
+  </div>
+</section>
+
+<section id="all-projects" class="line-blue-pink">
+    
+  <div class="cards">
+      {% for dado in dados %}
+          <a href="/article/{{dado.pk}}" class="card card-project hidden delay-1">
+              <img src="{{dado.imagem.url}}" alt="Minha Imagem" />
+              <div class="floating-link">
+                  Saiba mais <span class="icon-arrow-right2"></span>
+              </div>
+              <div class="card-info">
+                  <div class="title project">{{dado.title}}</div>
+                  <div class="description">
+                      <p>{{dado.description|safe}} </p>
+                  </div>
+              </div>
+          </a>
+      {% endfor %}
+  </div>
+  <div class="btn">Carregar Mais</div>
+</section>
+
+{% endblock %}

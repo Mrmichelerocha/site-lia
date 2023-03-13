@@ -1,0 +1,59 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  Página inicial
+{% endblock %}
+
+{% block conteudo %}
+
+<section id="intro" class="blog-intro line-pink-blue">
+    <div class="banner-container">
+        <img src="{% static '/assets/about-blog.png' %}" class="banner-bg">
+        <img src="{% static '/assets/about-blog.png' %}" class="banner-img" alt="" />
+    </div>
+    <div class="titles">
+        <h1>{{post.title}}</h1>
+        <p>{{post.description|safe}}</p>
+    </div>
+</section>
+
+<div class="bg-white">
+    <section id="information">
+        <div class="info-border-top"></div>
+        <div>
+            <p>{{post.created_at}}</p>
+        </div>
+        <div class="author">
+            <div class="author-border-left"></div>
+            <p>{{post.author}}</p>
+            <div class="author-border-right"></div>
+        </div>
+        <div class="share">
+            <a href="" class="icon icon-instagram"></a>
+            <a href="" class="icon icon-facebook"></a>
+            <a href="" class="icon icon-linkedin"></a>
+            <a href="" class="icon icon-link"></a>
+        </div>
+        <div class="info-border-bottom"></div>
+    </section>
+
+    <section id="post">
+        <p>
+            {{post.content|safe}} 
+        </p>
+
+    </section>
+</div>
+<section id="share" class="line-pink-blue">
+    <h3>Compartilhe o Artigo!</h3>
+    <div class="icons">
+        <a href="" class="icon icon-instagram"></a>
+        <a href="" class="icon icon-facebook"></a>
+        <a href="" class="icon icon-linkedin"></a>
+        <a href="" class="icon icon-link"></a>
+    </div>
+</section>
+
+{% endblock %}

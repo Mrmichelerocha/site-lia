@@ -1,0 +1,52 @@
+{% load static %}
+<header class="container d-flex">
+    <nav
+        id="navigation"
+        class="navbar fixed-top d-flex justify-content-between navbar-expand-lg navbar-light"
+    >
+        <a class="navbar-brand" href="#">
+            <img
+                src="{% static '/assets/logo.png' %}"
+                id="logo"
+                class="d-inline-block header-logo align-top"
+                alt="Logo da LIA"
+            />
+        </a>
+        <!-- <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul id="navbarToggleExternalContent" class="collapse menu nav justify-content-end">
+            <li class="menu-item nav-item"><a href="#">Home</a></li>
+            <li class="menu-item nav-item"><a href="#">Sobre</a></li>
+            <li class="menu-item nav-item"><a href="">Projetos</a></li>
+            <li class="menu-item nav-item"><a href="">Blog</a></li>
+            <li class="menu-item nav-item"><a href="">Contato</a></li>
+        </ul> -->
+        <div id="menu-links" class="menu-links">
+            <ul class="menu-nav justify-content-end">
+                <li class="menu-item nav-item">
+                    <a href="/">Home</a>
+                </li>
+                <li class="menu-item nav-item">
+                    <a href="/about/">Sobre</a>
+                </li>
+                <li class="menu-item nav-item">
+                    <a href="/projectFeature/">Projetos</a>
+                </li>
+                <li class="menu-item nav-item"><a href="/blogFeature/">Blog</a></li>
+                <li class="menu-item nav-item"><a href="/contact/">Contato</a></li>
+            </ul>
+        </div>
+        <div id="burger-container" class="burger-container">
+            <div id="burger" class="burger-button"></div>
+        </div>
+    </nav>
+</header>

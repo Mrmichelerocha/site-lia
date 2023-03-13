@@ -1,0 +1,49 @@
+{% load static %}
+
+<section id="intro">
+    <div class="banner-container-container line-pink-blue">
+        <div class="left-right-buttons">
+            <a id="left-button">
+                <button type="button" class="btn btn-circle">
+                    <span class="icon-chevron-thin-left"></span>
+                </button>
+            </a>
+            <a id="right-button">
+                <button type="button" class="btn btn-circle">
+                    <span class="icon-chevron-thin-right"></span>
+                </button>
+            </a>
+        </div>
+        <div id="banner-container" class="banner-container">
+            <div id="banner-bn1" class="banner active">
+                <div class="image">
+                    <img src="{% static '/assets/furutovrcarousel.png' %}" alt="" />
+                </div>
+            </div>
+            <div id="banner-bn2" class="banner">
+                <div class="image">
+                    <img src="{% static '/assets/inteligencia-artificial-carousel.png' %}" alt="" />
+                </div>
+            </div>
+            <div id="banner-bn3" class="banner">
+                <div class="image">
+                    <img src="{% static '/assets/fazemos-futuro-carousel.png' %}" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="banner-indicator">
+            <a
+                id="bn1"
+                class="banner-indicator-circle circle extra-light active"
+            ></a>
+            <a
+                id="bn2"
+                class="banner-indicator-circle circle extra-light"
+            ></a>
+            <a
+                id="bn3"
+                class="banner-indicator-circle circle extra-light"
+            ></a>
+        </div>
+    </div>
+</section>
