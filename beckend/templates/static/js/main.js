@@ -7,12 +7,12 @@ window.addEventListener("scroll", () => {
 		navigation.classList =
 			"navbar fixed-top d-flex justify-content-between navbar-expand-lg navbar-light smaller";
 		logo.classList = "d-inline-block header-logo align-top smaller";
-		logo.src = "./assets/logomenor.png";
+		logo.src = "/static/assets/logomenor.png";
 	} else {
 		navigation.classList =
 			"navbar fixed-top d-flex justify-content-between navbar-expand-lg navbar-light";
 		logo.classList = "d-inline-block header-logo align-top";
-		logo.src = "./assets/logo.png";
+		logo.src = "/static/assets/logo.png";
 	}
 });
 

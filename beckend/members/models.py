@@ -8,11 +8,17 @@ def get_img_upload_path(instance, filename):
 
 class CategoriaMenbers(models.Model): 
     category = models.CharField(max_length=150)
+
+    def __str__(self) -> str:
+        return self.category
     
 class Achievements(models.Model): 
     achievementsimg = models.ImageField(upload_to=get_img_upload_path)
     name = models.CharField(max_length=150)
     created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self) -> str:
+        return self.name
 
 class Members(models.Model):
     imagem = models.ImageField(upload_to=get_img_upload_path)

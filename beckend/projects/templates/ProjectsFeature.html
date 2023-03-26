@@ -7,18 +7,48 @@
 {% endblock %}
 
 {% block conteudo %}
-<section id="intro" class="blog-intro line-pink-blue">
-  <div class="banner-container">
-      <img src="{% static '/assets/about-project.png' %}" class="banner-bg">
-      <img src="{% static '/assets/about-project.png' %}" class="banner-img" alt="" />
-  </div>
+<section id="intro" class="not-home right-intro line-pink-blue">
+    <div class="banner-container-container">
+        <div class="banner-container">
+            <!-- <img src="./assets/Blooming Days.png" alt="" /> -->
+            <div class="image hidden">
+                <img src="{% static '/assets/project.png' %}" alt="" />
+            </div>
+            <div class="texts hidden delay-1">
+                <h1>Nossos Projetos</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="all-projects" class="line-blue-pink">
     
+    <form class="search-box" action="">
+        <input type="search" placeholder="Buscar" name="" />
+        <select
+            name="categories"
+            id="project-category"
+            class="selector"
+        >
+            {% for dado in dados %}
+            <option value="">Categorias</option>
+            <option value="{{dado.category}}">{{dado.category}}</option>
+            {% endfor %}
+        </select>
+        <input class="btn" type="submit" value="Buscar" />
+    </form>
+
+    
   <div class="cards">
       {% for dado in dados %}
-          <a href="/article/{{dado.pk}}" class="card card-project hidden delay-1">
+          <a href="/project/{{dado.pk}}" class="card card-project hidden delay-1">
               <img src="{{dado.imagem.url}}" alt="Minha Imagem" />
               <div class="floating-link">
                   Saiba mais <span class="icon-arrow-right2"></span>

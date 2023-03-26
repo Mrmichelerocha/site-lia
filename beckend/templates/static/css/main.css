@@ -795,7 +795,7 @@ body #our-articles .cards .card .card-info {
 }
 
 #intro.not-home .banner-container {
-  background: url("../../assets/Blooming Days.png");
+  background: url("../assets/circuit.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: clamp(650px, 5rem + 10vw, 5rem);
@@ -839,7 +839,6 @@ body #our-articles .cards .card .card-info {
   background: linear-gradient(0deg, #5d92eb 11.77%, #c668e9 100%);
   border-radius: 8px;
   z-index: -1;
-  object-fit: cover;
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.6);
 }
 #intro.not-home .banner-container .image img {
@@ -848,6 +847,7 @@ body #our-articles .cards .card .card-info {
   border: 1px solid transparent;
   border-radius: 8px;
   aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 @media (max-width: 900px) {

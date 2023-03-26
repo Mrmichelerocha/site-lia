@@ -8,17 +8,33 @@
 
 {% block conteudo %}
 <section id="intro" class="blog-intro line-pink-blue">
-  <div class="banner-container">
-      <img src="{% static '/assets/about-blog.png' %}" class="banner-bg">
-      <img src="{% static '/assets/about-blog.png' %}" class="banner-img" alt="" />
-  </div>
-  <div class="titles">
-      <h1>Nossos Artigos</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
-  </div>
+    <div class="banner-container">
+        <img src="{% static '/assets/blog.png' %}" class="banner-bg">
+        <img src="{% static '/assets/blog.png' %}" class="banner-img" alt="" />
+    </div>
+    <div class="titles">
+        <h1>Nossos Artigos</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+    </div>
 </section>
 
 <section id="all-projects" class="line-blue-pink">
+
+    <form class="search-box" action="">
+        <input type="search" placeholder="Buscar" name="" />
+        <select
+            name="categories"
+            id="project-category"
+            class="selector"
+        >
+            {% for dado in dados %}
+            <option value="">Categorias</option>
+            <option value="{{dado.category}}">{{dado.category}}</option>
+            {% endfor %}
+        </select>
+        <input class="btn" type="submit" value="Buscar" />
+    </form>
+
 
   <div class="cards">
       {% for dado in dados %}
