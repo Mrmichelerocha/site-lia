@@ -3,38 +3,48 @@
 {% load static %}
 
 {% block titulo %}
-  Página inicial
+Página inicial
 {% endblock %}
 
 {% block conteudo %}
-<section id="intro" class="blog-intro line-pink-blue">
-  <div class="banner-container">
-      <img src="{% static '/assets/members.png' %}" class="banner">
-  </div>
-  <div class="titles">
-      <h1>Nossos Membros</h1>
-  </div>
+<section id="intro" class="not-home left-intro line-pink-blue">
+    <div class="banner-container-container">
+        <div class="banner-container">
+            <div class="texts">
+                <h1>Membros</h1>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="all-projects" class="line-blue-pink">
-
-  <div class="cards">
-      {% for dado in dados %}
-          <a href="/member/{{dado.pk}}" class="card card-project hidden delay-1">
-              <img src="{{dado.imagem.url}}" alt="Minha Imagem" />
-              <div class="floating-link">
-                  teste mais <span class="icon-arrow-right2"></span>
-              </div>
-              <div class="card-info">
-                  <div class="title project">{{dado.name}}</div>
-                  <div class="description">
-                      <p>{{dado.description|safe}} </p>
-                  </div>
-              </div>
-          </a>
-      {% endfor %}
-  </div>
-  <div class="btn">Carregar Mais</div>
+    <form class="search-box" action="">
+        <input type="search" placeholder="Buscar" name="" />
+        <select name="categories" id="project-category" class="selector">
+            {% for dado in dados %}
+            <option value="">Categorias</option>
+            <option value="{{dado.category}}">{{dado.category}}</option>
+            {% endfor %}
+        </select>
+        <input class="btn" type="submit" value="Buscar" />
+    </form>
+    <div class="cards">
+        {% for dado in dados %}
+        <a href="/member/{{dado.pk}}" class="card card-project hidden delay-1">
+            <img src="{{dado.imagem.url}}" alt="Minha Imagem" />
+            <div class="floating-link">
+                Saiba mais <span class="icon-arrow-right2"></span>
+            </div>
+            <div class="card-info">
+                <div class="title project">{{dado.name}}</div>
+                <div class="description">
+                    <p>{{dado.description|safe}} </p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="btn">Carregar Mais</div>
 </section>
 
 {% endblock %}

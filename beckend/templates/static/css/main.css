@@ -114,7 +114,7 @@ a.btn:hover,
 
 .cards {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 5.5rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -140,7 +140,7 @@ a.btn:hover,
 }
 .cards .card .floating-link {
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 0;
   opacity: 0;
   z-index: 1;
@@ -189,7 +189,7 @@ a.btn:hover,
   text-align: center;
   font-family: "Oxygen", sans-serif;
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   margin: 1rem 0;
   padding: 0 0.5rem;
   color: white;
@@ -211,9 +211,9 @@ a.btn:hover,
 .cards .card:hover .card-info .description {
   height: auto;
 }
-.cards .card:hover .card-info .title.project {
+/* .cards .card:hover .card-info .title.project {
   display: none;
-}
+} */
 @media (max-width: 1260px) {
   .cards .card .card-info .description p {
     font-size: 0.8rem;
@@ -502,7 +502,6 @@ footer .footer-logo {
   object-position: left;
 }
 footer .row {
-  align-items: center;
   gap: 15%;
 }
 footer .sns,
@@ -744,7 +743,7 @@ body #our-projects .texts {
   width: 50%;
 }
 body #our-projects .texts p {
-  text-align: justify;
+  text-align: center;
 }
 body #our-projects .cards .card .card-info {
   background: rgba(98, 155, 250, 0.8);
@@ -775,7 +774,7 @@ body #our-articles .texts {
   width: 50%;
 }
 body #our-articles .texts p {
-  text-align: justify;
+  text-align: center;
 }
 body #our-articles .cards .card .card-info {
   background: rgba(198, 104, 233, 0.8);
@@ -935,7 +934,7 @@ body #our-articles .cards .card .card-info {
   width: 50%;
 }
 #things .texts p {
-  text-align: justify;
+  text-align: center;
 }
 #things .cards .card .card-info {
   background: rgba(98, 155, 250, 0.8);
