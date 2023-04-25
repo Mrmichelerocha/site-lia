@@ -292,6 +292,10 @@ a.btn:hover,
   object-fit: fill;
   aspect-ratio: 16/9;
 }
+#intro .banner-container-container .banner-container .banner .image img.mobile-banner {
+  display: none;
+  aspect-ratio: auto;
+}
 #intro .banner-container-container .left-right-buttons {
   position: absolute;
   z-index: 1;
@@ -366,6 +370,14 @@ a.btn:hover,
   #intro .banner-container-container .banner-container .banner .image img {
     max-width: none;
     height: 100%;
+  }
+}
+@media (max-width: 700px) {
+  #intro .banner-container-container .banner-container .banner .image img {
+    display: none;
+  }
+  #intro .banner-container-container .banner-container .banner .image img.mobile-banner {
+    display: block;
   }
 }
 
