@@ -1432,3 +1432,6 @@ body #our-articles .cards .card .card-info {
     padding: 2.5rem;
   }
 }
+a.btn:hover {
+  color:white !important;
+}

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from blog.models import Blog
 
 # Create your views here.
-def blogFeature(request):
+def articles(request):
   dados = Blog.objects.all()
   return render(request, 'BlogFeature.html', {'dados': dados})
 
